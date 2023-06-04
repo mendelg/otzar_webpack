@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',[_c('BaseCleanPopup',{directives:[{name:"body",rawName:"v-body"},{name:"zindex",rawName:"v-zindex"}],ref:"popup",attrs:{"mask":true,"h":37,"w":300,"winh":216,"winw":317},on:{"close":_vm.close,"c-outside":_vm.close},scopedSlots:_vm._u([{key:"header",fn:function(){return [_c('div',[_vm._v(_vm._s(_vm.$t("softwareNotUsed.title")))])]},proxy:true}])},[_c('div',{staticClass:"content"},[_c('div',{staticClass:"msgs center padd-v-24"},[_vm._v("\n            "+_vm._s(_vm.$t("softwareNotUsed.msgBody"))+"\n      ")]),_c('div',{staticClass:"bottom a-center bold"},[_vm._v("\n          "+_vm._s(_vm.$t("softwareNotUsed.continue"))+"\n          "),_c('div',{staticClass:"btns-container"},[_c('base-button',{on:{"click":_vm.close}},[_vm._v(_vm._s(_vm.$t("contactUs.clickHere")))])],1)])])])],1)
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

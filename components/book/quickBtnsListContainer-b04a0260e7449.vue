@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"quick-book"},[_c('div',{staticClass:"font-style-2"},[_vm._v(_vm._s(_vm.$t("quickBtn.addBooks")))]),(!_vm.adding)?_c('div',{staticClass:"quick-book-list"},[_vm._l((_vm.getButtons),function(item){return _c('quickBtnListItem',{key:item.id,staticClass:"item",attrs:{"item":item,"books":_vm.books}})}),(_vm.getButtons.length == 0)?_c('div',{staticClass:"empty-list h-100 w-100"},[_c('div',{staticClass:"mrg-t-36 a-center"},[_c('div',[_vm._v(_vm._s(_vm.$t("quickBtn.noBtns")))]),_c('div',[_vm._v(_vm._s(_vm.$t("quickBtn.pressForAdd")))])])]):_vm._e()],2):_vm._e(),(_vm.adding)?_c('addUserQuickBtn',{attrs:{"close":false},on:{"added":_vm.addedDone}}):_vm._e(),(!_vm.adding)?_c('footer',{staticClass:"footer-tziyun footer-msg"},[(!_vm.adding)?_c('BaseButton',{on:{"click":_vm.addQuickBtn}},[_vm._v(_vm._s(_vm.$t("tsiyunim.addBtnNew")))]):_vm._e()],1):_vm._e()],1)
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

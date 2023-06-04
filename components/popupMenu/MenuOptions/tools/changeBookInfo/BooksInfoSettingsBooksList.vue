@@ -1,0 +1,6 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"main-books-list-info"},[_c('HeaderMenu',{attrs:{"title":_vm.$t('changeBookInfo.title'),"routeBackName":_vm.routeBackName}}),_c('div',{staticClass:"title-content text-gray"},[_vm._v("\n    "+_vm._s(_vm.$t("changeBookInfo.chooseBook"))+"\n  ")]),_c('BaseSearchBooksSettings',{staticClass:"info-setting padd-0"}),_c('fakeScrollBar',{attrs:{"lengthArray":_vm.lenghList,"maxViewList":_vm.maxViewList,"heightItem":_vm.heightItem,"startAt":_vm.startList},scopedSlots:_vm._u([{key:"default",fn:function(data){return _vm._l((_vm.list.slice(data.startAt, data.endAt)),function(book){return _c('div',{key:book.id,staticClass:"item-book-out"},[_c('BaseItemBookName',{attrs:{"bookSelectedId":_vm.bookSelectedId,"book":book},on:{"click":function($event){return _vm.selectBook(book.id)},"change":function($event){_vm.selectBook(book.id);
+            _vm.goToBookSettings();}}})],1)})}}])})],1)
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

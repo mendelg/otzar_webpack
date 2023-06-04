@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"license-error-container font"},[_c('div',{staticClass:"license-error-inner"},[_c('h1',[_vm._v(_vm._s(_vm.$t("errors.errorMsg"))+" "+_vm._s(_vm.$t("errors.errorMsg2")))]),_c('br'),(_vm.isNoServerError)?[_c('h2',[_vm._v(_vm._s(_vm.$t("networkComputer.noSrv")))])]:[_c('h2',[_vm._v(_vm._s(_vm.$t("networkComputer.noPlace")))])],_c('h3',[_vm._v(_vm._s(_vm.$t("networkComputer.contact_admin")))]),(!_vm.isNoServerError)?_c('div',{staticClass:"btn",staticStyle:{"margin":"auto"},on:{"click":_vm.connectAgain}},[_vm._v("\n      "+_vm._s(_vm.$t("networkComputer.connectAgain"))+"\n    ")]):_vm._e(),(!_vm.isNoServerError && _vm.isServer)?_c('div',{staticClass:"btn",staticStyle:{"margin":"auto"},on:{"click":_vm.setServerToBoth}},[_vm._v("\n      "+_vm._s(_vm.$t("networkComputer.back_to_srv"))+"\n    ")]):_vm._e()],2)])
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

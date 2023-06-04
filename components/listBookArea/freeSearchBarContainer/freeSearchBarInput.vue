@@ -1,0 +1,8 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"div-input",class:{ border: _vm.isFocus }},[_c('div',{staticClass:"icon-circle otz-icon icon-otzar h-circle icon-search",on:{"click":_vm.doFreeSearch1}},[_vm._v("\n    u\n  ")]),(!_vm.inputEmpty)?_c('div',{staticClass:"otz-icon icon-otzar no-bg icon-clear",on:{"click":_vm.clearTxt}},[_vm._v("\n    F\n  ")]):_vm._e(),_c('BaseIcon',{directives:[{name:"tooltip",rawName:"v-tooltip",value:({
+      content: _vm.$t('mainTools.keyboardOnScreen'),
+      placement: 'right',
+    }),expression:"{\n      content: $t('mainTools.keyboardOnScreen'),\n      placement: 'right',\n    }"}],staticClass:"keyboard-icon",attrs:{"nameIcon":"keyboard","pathIcon":"k","height":20,"width":20},on:{"click":_vm.setVKB}}),_c('input',{directives:[{name:"focus",rawName:"v-focus"},{name:"select",rawName:"v-select.focus",modifiers:{"focus":true}}],ref:"input",staticClass:"input-search",attrs:{"type":"text","placeholder":_vm.$t('freeSearchInput.placeHolder')},domProps:{"value":_vm.getTextInput},on:{"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter"))return null;return _vm.doFreeSearch1.apply(null, arguments)},"keydown":_vm.scrollList,"input":_vm.setSearchWords,"focus":_vm.toggleFocus,"blur":_vm.toggleFocus}})],1)
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{class:[_vm.baseClass, _vm.activeClass],on:{"click":function($event){return _vm.setFreeSearchListActive(true)}}},[_c('div',{staticClass:"flex-column full-h"},[_c('freeSearchProgress',{directives:[{name:"show",rawName:"v-show",value:(_vm.isSearching),expression:"isSearching"}],attrs:{"percent":_vm.percent,"search":_vm.rawSearchTxt,"seconds":_vm.seconds,"stopAnimation":_vm.stopAnimation,"message":_vm.$t('freeSearchResults.reloadResults')},on:{"stop":function($event){return _vm.stopFreeSearch()}}}),(_vm.showListContainer)?_c('div',{staticClass:"h-100"},[_c('freeSearchListHeaderContainer',{attrs:{"searchTxt":_vm.searchTxt},on:{"search":_vm.searchInList,"checkall":_vm.checkAll}}),_c('freeSearchListBookContainer',{attrs:{"search":_vm.searchTxt}})],1):_vm._e()],1)])
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

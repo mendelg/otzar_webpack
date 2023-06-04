@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"outer-msg-box",class:{ show: _vm.show }},[_c('div',{ref:"msgbox",staticClass:"msg-box"},[_c('titleAndXHeader',{on:{"click":_vm.close}},[_vm._v(_vm._s(_vm.msg.title))]),_c('div',{staticClass:"content rtl"},[_c('div',{staticClass:"align-center-div"},[_c('input',{directives:[{name:"focus",rawName:"v-focus"}],ref:"input",staticClass:"input-border",attrs:{"type":"text","placeholder":_vm.msg.placeholder},on:{"keydown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter"))return null;return _vm.confirm.apply(null, arguments)}}})])]),_c('div',{staticClass:"footer"},[_c('div',{staticClass:"btns margin-auto flex"},[_c('baseButton',{staticClass:"mrg-l-3",on:{"click":function($event){return _vm.confirm()}}},[_vm._v(_vm._s(_vm.$t("general.confirm")))]),_c('baseButton',{staticClass:"mrg-l-3",on:{"click":_vm.close}},[_vm._v(_vm._s(_vm.$t("general.cancel")))])],1)])],1)])
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

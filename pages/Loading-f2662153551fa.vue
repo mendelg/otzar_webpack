@@ -1,0 +1,7 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return (_vm.bookOnlyMode)?_c('div',{staticClass:"load-img"},[_c('img',{staticStyle:{"height":"150px"},attrs:{"src":_vm.gifSrc}})]):_c('div',{staticClass:"outer rtl"},[_c('div',{class:{ inner: !_vm.$_mobile, 'inner-mobile': _vm.$_mobile }},[_c('div',{staticClass:"con"}),_c('div',{staticClass:"otzar"},[_c('div',{staticClass:"logo"}),_c('h1',[_vm._v(_vm._s(_vm.$t("welcome.descTitle")))]),(_vm.$store.state.otzar_version)?_c('h2',[_vm._v("\n        "+_vm._s(_vm.$t("loadingPage.version"))+"\n        "+_vm._s(_vm.$store.state.otzar_version)+".0\n      ")]):_vm._e(),(!_vm.applyingUpdates)?_c('div',{staticClass:"bar bar2"},[_c('div',{staticClass:"shuttle shuttle2"})]):_vm._e(),_c('div',{staticClass:"rtl",staticStyle:{"margin-top":"55px"}},[_c('p',[_vm._v("\n          "+_vm._s(_vm.getTextLoading == "error"
+              ? _vm.$t("loader.updateError")
+              : _vm.$t("loader." + _vm.getTextLoading))+"...\n        ")]),(_vm.getTextLoading == 'error')?_c('p',[_vm._v("\n          "+_vm._s(_vm.$store.state.loader.upgradeErrorMsg)+"\n        ")]):_vm._e()]),(_vm.slowLoad)?_c('p',[_vm._v("\n        "+_vm._s(_vm.$t("loader.slowLoad"))+"\n      ")]):_vm._e(),(_vm.$store.state.loader.applyUpdatesProgMsg)?_c('p',[_vm._v("\n        "+_vm._s(_vm.$store.state.loader.applyUpdatesProgMsg)+"\n      ")]):_vm._e()]),_c('div',{directives:[{name:"mobile",rawName:"v-mobile.hide",modifiers:{"hide":true}}],staticClass:"stars"})])])
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

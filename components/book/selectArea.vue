@@ -1,0 +1,32 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"container",staticClass:"selectContainer ocr-container",class:[
+    {
+      ocrPointer: _vm.OCREnabled && !_vm.finished,
+      'cursor-marker': _vm.getAddExtensType == 'marker',
+      'cursor-link': _vm.createLinksMode,
+    },
+    _vm.cursorClass,
+  ],style:(_vm.style),attrs:{"page":_vm.pagepos,"ratio":_vm.imgRatio,"mleft":_vm.left},on:{"click":function($event){return _vm.openEditorPosition($event)},"mousedown":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"left",37,$event.key,["Left","ArrowLeft"]))return null;if('button' in $event && $event.button !== 0)return null;return _vm.startCropping.apply(null, arguments)},"mouseup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"left",37,$event.key,["Left","ArrowLeft"]))return null;if('button' in $event && $event.button !== 0)return null;return _vm.stopCropping.apply(null, arguments)},"mousemove":_vm.doCropping,"touchstart":_vm.startCropping,"touchend":_vm.stopCropping,"touchcancel":_vm.stopCropping,"touchmove":_vm.doCropping}},[(_vm.showEditor)?_c('BaseCleanPopup',{directives:[{name:"body",rawName:"v-body"},{name:"zindex",rawName:"v-zindex"}],attrs:{"h":37,"winh":_vm.hUserExtens,"winw":_vm.wUserExtens,"noneOverlay":true},on:{"mouseenter":function($event){return _vm.setGrab(false)},"mouseleave":function($event){return _vm.setGrab(true)},"close":_vm.closeAllExtens},scopedSlots:_vm._u([{key:"header",fn:function(){return [_c('div',{staticClass:"flex-center-vh"},[_vm._v("\n        "+_vm._s(_vm.addExtensType == "comment"
+            ? _vm.$t("comments.comment")
+            : _vm.addExtensType == "link"
+            ? _vm.$t("links.link")
+            : _vm.$t("keys.key"))+"\n      ")])]},proxy:true}],null,false,386947864)},[(_vm.addExtensType == 'comment')?_c('add-user-exten',{attrs:{"book":_vm.bookId,"tabId":_vm.tabId,"note":_vm.editorItem,"edit":true},on:{"close":function($event){_vm.showEditor = false},"delete":_vm.deleteComment}}):(_vm.addExtensType == 'key')?_c('add-user-key',{attrs:{"book":_vm.bookId,"tabId":_vm.tabId,"item":_vm.editorItem,"edit":true},on:{"close":function($event){_vm.showEditor = false},"delete":_vm.deleteKey}}):(_vm.addExtensType == 'link')?_c('add-user-link',{attrs:{"book":_vm.bookId,"tabId":_vm.tabId,"item":_vm.editorItem,"edit":true},on:{"close":_vm.closeAllExtens,"delete":false,"gotoitempage":(item) => _vm.goToLink(item)}}):_vm._e()],1):_vm._e(),(true || !_vm.isErrorImage)?[_vm._l((_vm.shasSections()),function(section){return _vm._l((section.rects),function(row){return _c('shasSubSection',{directives:[{name:"show",rawName:"v-show",value:(_vm.$store.state.mefo.enable),expression:"$store.state.mefo.enable"}],key:row.id,staticClass:"sara",style:(_vm.shasRowStyle(row) + '; z-index:3;'),attrs:{"section":section,"row":row,"secHover":section.id == _vm.addClassToThisShasSec,"tabId":_vm.tabId,"page":_vm.pageData.position},on:{"mouseenter":function($event){_vm.addClassToThisShasSec = section.id},"mouseleave":function($event){_vm.addClassToThisShasSec = -1},"selectShasSec":_vm.selectShasSec}})})}),(
+        !_vm.isMefo ||
+          !this.$store.state.mefo.enable ||
+          String(_vm.tabId).startsWith('win_')
+      )?[_vm._l((_vm.mmts),function(mm1){return [_c('div',{key:mm1.id,staticStyle:{"z-index":"1"}},_vm._l((mm1.words),function(m,i){return _c('div',{directives:[{name:"tooltip",rawName:"v-tooltip",value:(_vm.mmTooltip(mm1)),expression:"mmTooltip(mm1)"}],key:i,class:{
+              'yesod-mm': mm1.type == 'yesod' && _vm.showMm,
+              mm: true,
+              mmPointer: !_vm.MMhideMode.link,
+              mmHover: !_vm.MMhideMode.hover && mm1.id == _vm.addClassToThisMM,
+              mmHover2:
+                !_vm.MMhideMode.hover &&
+                mm1.id == _vm.addClassToThisMM &&
+                mm1.type == 'list',
+            },style:(_vm.mmStyle(m.pos) + '; z-index:2;'),on:{"mouseenter":function($event){_vm.addClassToThisMM = mm1.id},"mouseleave":function($event){_vm.addClassToThisMM = -1},"click":function($event){_vm.MMhideMode.link || _vm.openMm(mm1.books)}}})}),0)]})]:_vm._e()]:_vm._e(),(!_vm.isErrorImage && _vm.pageLoaded)?[_vm._l((_vm.listMarker),function(item){return _c('baseIconExtensOnPage',{key:item.id,staticClass:"icon-comment icon-marker marker",style:(_vm.markerStyleFromPx(item)),attrs:{"type":"marker","id":item.id,"item":item},on:{"click":function($event){return _vm.removeMarker(item.id)},"dblclick":function($event){$event.stopPropagation();}}})}),_vm._l((_vm.listComment),function(item){return _c('baseIconExtensOnPage',{key:item.id + 'b',staticClass:"icon-comment",style:(_vm.StyleFromPx(item)),attrs:{"type":"comment","id":item.id,"item":item},on:{"click":function($event){$event.stopPropagation();return _vm.openWin(item, 'comment', $event)},"dblclick":function($event){$event.stopPropagation();},"dragStart":_vm.onDragStart,"dragEnd":_vm.onCommentDragEnd}})}),_vm._l((_vm.listKey),function(item){return _c('baseIconExtensOnPage',{key:item.id + 'b',staticClass:"icon-comment op1",style:(_vm.StyleFromPx(item)),attrs:{"type":"key","id":item.id,"item":item},on:{"click":function($event){$event.stopPropagation();return _vm.openWin(item, 'key', $event)},"dblclick":function($event){$event.stopPropagation();},"dragStart":_vm.onDragStart,"dragEnd":_vm.onKeyDragEnd}})}),_vm._l((_vm.listLink),function(item){return _c('baseIconExtensOnPage',{directives:[{name:"zindex",rawName:"v-zindex"}],key:item.id + 'link',staticClass:"icon-comment op1",style:(_vm.StyleFromPx(item)),attrs:{"type":"link","id":item.id,"item":item},on:{"click":function($event){return _vm.goToLink(item.linkedTo)},"dragStart":_vm.onDragStart,"dragEnd":_vm.onLinkDragEnd}},[_c('BaseContextMenu',{attrs:{"noBubble":true}},[_c('div',{staticClass:"menu-item",on:{"click":function($event){return _vm.openWin(item, 'link', $event)}}},[_vm._v("\n          "+_vm._s(_vm.$t("general.edit"))+"\n        ")]),_c('div',{staticClass:"menu-item",on:{"click":function($event){return _vm.openInNewWin(item.linkedTo.bookId, item.linkedTo.position)}}},[_vm._v("\n          "+_vm._s(_vm.$t("itemBook1.openNewWindow"))+"\n        ")])])],1)})]:_vm._e(),_c('div',{staticClass:"cropper",class:{
+      marker: _vm.finished || _vm.createMarkerMode,
+      hide: !_vm.OCREnabled && !_vm.$store.state.bookPopups.OCRResultsVisible,
+    },style:(_vm.cropperStyle)})],2)
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

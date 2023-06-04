@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{directives:[{name:"click-outside",rawName:"v-click-outside",value:(_vm.closeMenu),expression:"closeMenu"}],staticClass:"bookpicker",on:{"click":_vm.toggleMenu}},[_c('div',{staticClass:"selected-text"},[_vm._v(_vm._s(_vm.getSelected))]),_c('span',{staticClass:"mef-font-default mef-font dropdown-icon"},[_vm._v("p")]),_c('div',{staticClass:"option-items",class:{ 'mef-open-menu': _vm.showMenu }},_vm._l((_vm.sBooks),function(item,index){return _c('p',{key:index,staticClass:"item-option",on:{"click":function($event){$event.stopPropagation();return _vm.selectItem(item)}}},[_c('span',{staticStyle:{"padding-right":"7px"}},[_vm._v(_vm._s(item.bookName))])])}),0)])
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

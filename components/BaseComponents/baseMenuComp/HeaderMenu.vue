@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"header-menu"},[_c('div',{staticClass:"arrow-bake-menu",on:{"click":_vm.goBack}},[(_vm.viewArrow && _vm.arrow)?_c('BaseIcon',{staticClass:"icon-menu-outer icon-back",attrs:{"width":"18","height":"14","nameIcon":"arrow-back","pathIcon":"icons-ganeral"}}):_vm._e()],1),(!_vm.viewArrow)?_c('BaseIcon',{staticClass:"icon-menu-outer icon-menu",attrs:{"width":"5","height":"17","nameIcon":"icon-menu-black","pathIcon":"icons-ganeral"},on:{"click":_vm.goToHomePage}}):_vm._e(),_c('div',{staticClass:"h-100 flex flex-align-center mrg-l-6"},[(!_vm.arrow)?_c('baseIcon',{attrs:{"width":"20","height":"20","pathIcon":"icons","nameIcon":"support"}}):_vm._e()],1),_c('div',{staticClass:"title",class:{ 'a-right': _vm.viewArrow }},[_vm._v(_vm._s(_vm.title))]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.$_mobile),expression:"!$_mobile"}],staticClass:"x-close-menu close-popup otz-icon",on:{"click":_vm.goToHomePage}},[_vm._v("\n    F\n  ")])],1)
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

@@ -1,0 +1,9 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"con"},[(_vm.list.length == 0)?_c('noResultsInList',{attrs:{"text":_vm.getNameListBook}}):_vm._e(),(_vm.list.length > 0)?_c('div',{ref:"el",staticClass:"list-book",class:{ 'h-100': _vm.$_mobile },attrs:{"id":"the-book-list","tabindex":"0"},on:{"keydown":function($event){return _vm.scrollList($event)},"keyup":_vm.generalShortsUp,"mouseenter":_vm.setFocus}},[_c('RecycleScroller',{ref:"listScroller",staticClass:"rec-scroller",staticStyle:{"height":"100%","direction":"ltr"},attrs:{"buffer":180,"items":_vm.list,"item-size":_vm.userSettings.settings.bookItemSize != 'compact' ? 37 : 25},on:{"mouseenter":function($event){return _vm.$emit('mouseenter', $event)},"wheelScroll":_vm.wheelScroll},scopedSlots:_vm._u([{key:"default",fn:function({ item, index, active }){return [_c('itemBook',{attrs:{"type":"book","book":item.special ? item.book : item,"page":item.special ? item.page : null,"closeVol":item.special && item.allVolumes !== undefined
+            ? item.allVolumes
+            : true,"activeinx":_vm.activeBookIndex,"active":_vm.activeBook,"inx":index,"select":_vm.select,"checked":_vm.getBooksChecked[item.special ? item.book.id : item.id],"showVolumes":_vm.getOpenVolumes[
+            item.special ? item.book.mainVolume : item.mainVolume
+          ],"listIndex":index,"activeInScroll":active},on:{"open":_vm.setActiveData,"set-volumes":_vm.setVols,"changevol":_vm.setVolumesMode,"selected":_vm.selectItem,"toggle-volumes":_vm.toggleVolumes,"lastCheck":_vm.setLastCheck,"shiftCheck":_vm.doShiftCheck,"updateActive":_vm.updateLastActive}})]}}],null,false,1562162295)})],1):_vm._e()],1)
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

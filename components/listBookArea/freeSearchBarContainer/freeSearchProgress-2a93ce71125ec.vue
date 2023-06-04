@@ -1,0 +1,5 @@
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"prog-container border-b-light"},[_c('div',{staticClass:"prog-inner"},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(this.seconds),expression:"this.seconds"}],staticClass:"percent-container"},[_c('div',{staticClass:"percent"},[_vm._v(_vm._s(_vm.secs)+" "+_vm._s(_vm.$t("times.second")))])]),_c('progressBar',{attrs:{"percentage":_vm.percent,"show":_vm.show,"loadingClass":"fsloadingbar","stopAnimation":_vm.stopAnimation}})],1),_c('footer',{staticClass:"footer flex-bet rtl"},[_c('span',{staticClass:"message"},[_vm._v(_vm._s(_vm.message)+" "+_vm._s(_vm.search))]),_c('BaseButton',{on:{"click":function($event){$event.stopPropagation();return _vm.stopSearch()}}},[_vm._v(_vm._s(_vm.$t("freeSearchResults.stop")))])],1)])
+}
+var staticRenderFns = []
+
+export { render, staticRenderFns }
